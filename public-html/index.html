@@ -3,12 +3,25 @@
 	<title>Rob Best</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="jq/jquery.min.js"></script>
+	<script src="jq/jquery.rss.min.js"></script>
+	<script>
+      jQuery(function($) {
+        $("#rss-feeds").rss("http://ribbybibby.blogspot.com/feeds/posts/default",
+	{
+		limit: 10,
+		layoutTemplate: "{entries}",
+		entryTemplate: "<div class='whiteybox'><h3>{title}</h3>{body}<br><h4>{date}</h4><br></div><div class='pbg'></div>",
+	}
+	)
+      })
+	</script>
 </head>	
 	<body>
 
 		<div class="pbg"></div>
 
-		<div class="whitebox">
+		<div class="whiteybox">
 			<h1>
 				ROB BEST 
 				<a href="https://uk.linkedin.com/in/ribbybibby"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> 
@@ -48,5 +61,12 @@
 		</div>
 
 		<div class="pbg"></div>
+
+		<div class="whiteybox"><h1>BLOG>>></h1></div>
+
+		<div class="pbg"></div>
+
+		<div id="rss-feeds"></div>
+
 	</body>
 </html>
