@@ -12,10 +12,10 @@ build:
 	@sudo docker build -t www .
 
 run-dev:
-	@sudo docker run -d -p 8080:80 --name www www
+	@sudo docker run -d -p 80:80 --name www www
 
 run-live:
-	@sudo docker run -d -p 8080:80 --name www ribbybibby/www
+	@sudo docker run -d -p 80:80 --name www ribbybibby/www
 
 pull:
 	@sudo docker pull ribbybibby/www
